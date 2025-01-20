@@ -1,10 +1,10 @@
 ##This application will allow users to find a list of 
 ##the 5 smallest deer species in the world
 
-##Here is the file list for the vehicles
+##Here is the file list for the deer species
 deerSpeciesList =  ['Pudu, 7-13 inches,' , 'Pygmy Brocket, 15-20 inches,' , 'Indian Hog Deer, 14 inches,' , 'Chinese Water Deer, 18-22 inches,' , 'Truong Son Muntjac, 15 inches,' ,]
 
-##Write the initial vehicle list to the file
+##Write the initial deer list to the file
 with open('deerSpeciesList.txt', 'w') as tfile:
     tfile.write('\n'.join(deerSpeciesList))
 
@@ -16,14 +16,14 @@ prompt = ("******************************** \nDeer Finder v0.1 \n***************
 
 ##Convert all prompt elif statements to clear defined functions
 
-##Function and statement for all vehicle printing
+##Function and statement for all deer printing
 def Print_Deer_List():
     print("The top 5 smallest deer species in the world are: ")
     with open('deerSpeciesList.txt', 'r') as tfile:
         for line in tfile:
             print(f"- {line.strip()}")
 
-##Function and statement to search for a vehicle
+##Function and statement to search for a deer
 def Search_Deer_List():
     print("******************************** \nPLEASE ENTER THE DEER SPECIES NAME: ")
     searchDeer = input("").lower()  #Convert to lowercase to make search case-insensitive
